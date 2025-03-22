@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script>
+        // Function to toggle between light and dark mode
+        function toggleDarkMode() {
+            const isDarkMode = document.body.classList.toggle('dark-mode');
+            document.body.classList.toggle('light-mode', !isDarkMode);
+            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light'); // Save theme preference
+        }
+
+        // Apply the saved theme on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.body.classList.add(savedTheme + '-mode');
+        });
+    </script>
+    <style>
+        .profile-header {
+            background-color: var(--primary-color); /* Red */
+            color: var(--text-light);
+        }
+        .btn {
+            background-color: var(--accent-color);
+            color: var(--text-light);
+        }
+        .btn:hover {
+            background-color: var(--primary-color); /* Red */
+        }
+        .parallax-section {
+            display: fixed;
+            width: 100%;
+            height: 500px;
+            background-size: contain;
+        }
+    </style>
+</head>
+<body class="light-mode">
+    <!-- DOC HEADER -->
+    <header>
+        <nav class="parallax-navbar">
+            <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+                <h1 style="margin: 0; font-size: 1.5rem; color: var(--link-color, #333);">Nipon Fabrication</h1>
+                <div class="theme-switch-container" style="margin-left: auto;">
+                    <label for="theme-switch" style="font-size: 0.9rem; color: var(--link-color, #333);">
+                        Theme
+                    </label>
+                    <label class="theme-switch">
+                        <input id="theme-switch" type="checkbox" onchange="toggleDarkMode()">
+                        <span class="theme-switch-slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div style="display: flex; gap: 15px; align-items: center; margin-top: 10px;">
+                <a href="index.html">Home</a>
+                <a href="profile.html">Profile</a>
+                <a href="services.html">Services</a>
+                <a href="projects.html">Projects</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN BODY -->
+    <main class="profile-container">
+        <div class="profile-card">
+            <div class="profile-header">
+                <h2>Nipon Fabrication</h2>
+            </div>
+            <div class="profile-body">
+                <img src="assets/images/owner.jpg" class="profile-image" alt="Profile Picture">
+                <h4 class="profile-name">Nipon Patar</h4>
+                <p class="profile-title">Expert in Welding & Roofing</p>
+                <p class="profile-quote">"Bringing quality craftsmanship to every project!"</p>
+                <a href="tel:+91 97745 95335" class="btn">Call Me</a>
+                <!-- Skills Section -->
+                <h5 class="section-title">Skills & Expertise</h5>
+                <ul class="skills-list">
+                    <li>✔ Advanced Welding Techniques</li>
+                    <li>✔ Custom Metal Fabrication</li>
+                    <li>✔ Professional Roofing Installation</li>
+                    <li>✔ Structural Repairs & Reinforcement</li>
+                </ul>
+            
+                <!-- Achievements -->
+                <h5 class="section-title">Achievements</h5>
+                <p>🏆 Over 10+ Years of Experience</p>
+                <p>🔨 500+ Successful Roofing & Welding Projects</p>
+                <p>⭐ Positive feedback by Almost Every Client</p>
+                
+                <!-- Location -->
+                <hr>
+                <h5 class="section-title">Our Location</h5>
+                <p>
+                    <b>
+                        <a id="location" href="https://www.google.com/maps/place/Tongdentsuyong+Ward,+Mokokchung,+Nagaland+798601/@26.3262874,94.5207237,17z/data=!3m1!4b1!4m6!3m5!1s0x3747a8350cfcd95b:0x961663d2ca88afbb!8m2!3d26.326529!4d94.5228042!16s%2Fg%2F1hc2tc2p4?entry=ttu&g_ep=EgoyMDI1MDMxOC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" target="_blank">
+                            Tondentsuyong Ward, Mokokchung,
+                            <br>
+                            Nagaland
+                        </a>
+                    </b>
+                </p>
+                <hr>
+                <!-- YouTube Video Showcase -->
+                <h5 class="section-title">Featured Project Video</h5>
+                <div class="video-container">
+                    <iframe width="427" height="240" src="https://www.youtube.com/embed/cfSEdHZGbXA" title="Roofing Design house | beautiful front view |" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>               
+            </div>
+        </div>
+    </main>
+    <footer>
+        <h2>Follow Us</h2>
+        <div class="social-links">
+            <a href="https://www.youtube.com/@niponfabrication4339" target="_blank">
+                <img class="icon" width="28" height="28" src="https://img.icons8.com/color/48/youtube-play.png" alt="YouTube"> YouTube
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100083563080741" target="_blank">
+                <img width="28" height="28" src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook"> Facebook
+            </a>
+            <a href="https://www.instagram.com/nipon_fabrication_/?hl=en" target="_blank">
+                <img width="28" height="28" src="https://img.icons8.com/color/48/instagram-new--v1.png" alt="Instagram"> Instagram
+            </a>
+        </div>
+        <p>&copy; 2023 Nipon Fabrication. All rights reserved.</p>
+    </footer>
+</body>
+</html>

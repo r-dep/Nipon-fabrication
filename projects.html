@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/carousel-styles.css"> <!-- Link to the carousel stylesheet -->
+    <style>
+        h1 {
+            font-size: 2.5rem; /* Increase font size */
+            font-weight: bold; /* Make it bold */
+            text-align: center; /* Center-align the heading */
+            color: var(--primary-color); /* Use primary color */
+            margin-bottom: 20px; /* Add spacing below */
+        }
+
+        h2 {
+            font-size: 2rem; /* Increase font size */
+            font-weight: bold; /* Make it bold */
+            color: var(--primary-color); /* Use primary color */
+            margin-top: 30px; /* Add spacing above */
+            margin-bottom: 15px; /* Add spacing below */
+        }
+
+        h3 {
+            font-size: 1.8rem; /* Increase font size */
+            font-weight: bold; /* Make it bold */
+            color: var(--accent-color); /* Use accent color */
+            margin-top: 20px; /* Add spacing above */
+            margin-bottom: 10px; /* Add spacing below */
+        }
+
+        h4 {
+            font-size: 1.5rem; /* Increase font size */
+            font-weight: bold; /* Make it bold */
+            color: var(--link-color); /* Use link color */
+            margin-top: 15px; /* Add spacing above */
+            margin-bottom: 10px; /* Add spacing below */
+        }
+    </style>
+    <script>
+        function toggleDarkMode() {
+            const isDarkMode = document.body.classList.toggle('dark-mode');
+            document.body.classList.toggle('light-mode', !isDarkMode);
+            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        }
+
+        // Apply the saved theme on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.body.classList.add(savedTheme + '-mode');
+        });
+
+        let currentIndex = 0;
+
+        function moveCarousel(direction) {
+            const items = document.querySelectorAll('.carousel-item');
+            const totalItems = items.length;
+
+            items[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + direction + totalItems) % totalItems;
+            items[currentIndex].classList.add('active');
+        }
+
+        function autoSlideCarousel() {
+            moveCarousel(1);
+        }
+
+        // Initialize the first item as active and start auto-slide
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.carousel-item')[0].classList.add('active');
+            setInterval(autoSlideCarousel, 1500); // Auto-slide every 1.5 seconds
+        });
+    </script>
+</head>
+<body class="light-mode">
+    <!-- DOC HEADER -->
+    <header>
+        <nav class="parallax-navbar">
+            <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+                <h1 style="margin: 0; font-size: 1.5rem; color: var(--link-color, #333);">Nipon Fabrication</h1>
+                <div class="theme-switch-container" style="margin-left: auto;">
+                    <label for="theme-switch" style="font-size: 0.9rem; color: var(--link-color, #333);">
+                        Theme
+                    </label>
+                    <label class="theme-switch">
+                        <input id="theme-switch" type="checkbox" onchange="toggleDarkMode()">
+                        <span class="theme-switch-slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div style="display: flex; gap: 15px; align-items: center; margin-top: 10px;">
+                <a href="index.html">Home</a>
+                <a href="profile.html">Profile</a>
+                <a href="services.html">Services</a>
+                <a href="projects.html">Projects</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN BODY -->
+    <main>
+
+        <!-- Carousel Section -->
+        <div class="carousel-container slide-in">
+            <div class="carousel">
+                <div class="carousel-item"><img src="assets/carousel/edit 1.webp" alt="Edit 1"></div>
+                <div class="carousel-item"><img src="assets/carousel/edit 2.webp" alt="Edit 2"></div>
+                <div class="carousel-item"><img src="assets/carousel/edit 3.webp" alt="Edit 3"></div>
+                <div class="carousel-item"><img src="assets/carousel/edit 4.webp" alt="Edit 4"></div>
+                <div class="carousel-item"><img src="assets/carousel/edit 5.jpg" alt="Edit 5"></div>
+            </div>
+            <button class="carousel-button prev" onclick="moveCarousel(-1)">&#10094;</button>
+            <button class="carousel-button next" onclick="moveCarousel(1)">&#10095;</button>
+        </div>
+        <h1 class="slide-in">Our Projects</h1>
+        <p class="slide-in">We excel in a lot of home fabrication categories but our most projects are in the following categories:</p>
+        <ul class="project-list slide-in">
+            <li><a href="#roofing">Roofing</a></li>
+            <br>
+            <li><a href="#gates">Gates</a></li>
+            <br>
+            <li><a href="#roof-structures">Roof/home structures (Truss)</a></li>
+            <br>
+            <li><a href="#stairs">Stairs</a></li>
+            <br>
+
+            <div class="center">
+                <!-- Corrected missing href in the button -->
+                <button class="btn">
+                    <a href="https://www.youtube.com/@niponfabrication4339" target="_blank" style="text-decoration: none; color: inherit;">
+                        See more on YouTube
+                    </a>
+                </button>
+            </div>
+        </ul>
+        <div id="roofing" class="slide-in">
+            <h2>Roofing</h2>
+            <p>Our roofing solutions combine durability and aesthetics, ensuring your home is protected while looking stunning.</p>
+            <img src="assets/images/roofingA.png" alt="Roofing" width="100%">
+            <h3>Popular Roofing Projects</h3>
+            <br>
+            <h4>Roofing Project 1</h4>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/cfSEdHZGbXA?si=PFBYr3GE1GH6KBAs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <br>
+            <h4>Roofing Project 2</h4>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/LkU3TaO588g?si=vgKFRiDMvm6Wwqu8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <br>
+            <h4>Roofing Project 3</h4>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/aar0CYI1GS0?si=WNNRDLnZrna4nFqy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <br>
+        </div>
+        <div id="gates" class="slide-in"> 
+            <h2>Gates</h2>
+            <p>Our gates are designed to provide security and elegance, tailored to match your property's unique style.</p>
+            <img src="assets/images/gateA.png" alt="Gates" width="100%">
+            <h3>Popular Gate Projects</h3>
+            <br>
+            <h4>Gate Project 1</h4>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hhwPdUrHCxg?si=rxY7pmgnHK3drhab" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <br>
+            <h4>Gate Project 2</h4>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/4eBxdJAvXUI?si=sQOSSWH64HmyvfZs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <br>
+            <h4>Gate Project 3</h4>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/cxe3qZ9_Rbo?si=SoX5yQGqxr_Uhaxl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div id="roof-structures" class="slide-in">
+            <h2>Roof/Home Structures (Truss)</h2>
+            <p>Our truss structures are engineered for strength and efficiency, offering reliable support for your roofing needs.</p>
+            <img src="assets/images/oof-structuresA.png" alt="Roof/Home Structures" width="100%">
+            <h3>Popular Roof/Home Structures Projects</h3>
+            <br>
+            <h4>Roof/Home Structures Project 1</h4>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/naCkI2BlWRA?si=UwlN4edk1jw7TXHt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <br>
+            <h4>Roof/Home Structures Project 2</h4>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/kwJ-1XBgotk?si=EqhDy1ZvJ9VahqfK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <br>
+            <h4>Roof/Home Structures Project 3</h4>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6Bgx5e563_E?si=vR0-HdgRQudliTUT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div id="stairs" class="slide-in">
+            <h2>Stairs</h2>
+            <p>Our custom stairs are crafted to blend functionality with modern design, elevating your home's interior or exterior.</p>
+            <img src="assets/images/stairsA.webp" alt="Stairs" width="100%">
+            <h3>Popular Stairs Projects</h3>
+            <br>
+            <h4>Stairs Project 1</h4>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/3baO2DmQns0?si=neFJUolquWrZRwJE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <br>
+            <h4>Stairs Project 2</h4>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/WrQwkRMrZjw?si=594qB2YAzPKiEbVc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <br>
+            <h4>Stairs Projects 3</h4>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/5orrXRI6PcY?si=R61zocr7NhLnJhpw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </main>
+    <footer>
+        <h2>Follow Us</h2>
+        <div class="social-links">
+            <a href="https://www.youtube.com/@niponfabrication4339" target="_blank">
+                <img class="icon" width="28" height="28" src="https://img.icons8.com/color/48/youtube-play.png" alt="YouTube"> YouTube
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100083563080741" target="_blank">
+                <img width="28" height="28" src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook"> Facebook
+            </a>
+            <a href="https://www.instagram.com/nipon_fabrication_/?hl=en" target="_blank">
+                <img width="28" height="28" src="https://img.icons8.com/color/48/instagram-new--v1.png" alt="Instagram"> Instagram
+            </a>
+        </div>
+        <p>&copy; 2023 Nipon Fabrication. All rights reserved.</p>
+    </footer>
+</body>
+</html>
