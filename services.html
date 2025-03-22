@@ -3,8 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Services</title>
     <link rel="stylesheet" href="/styles/styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Responsive styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .parallax-navbar {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .parallax-navbar h1 {
+            font-size: 1.2rem;
+        }
+
+        .parallax-navbar div {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        h1, h2 {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            font-size: 0.9rem;
+        }
+    </style>
     <script>
         function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
@@ -105,5 +166,20 @@
             </ul>
         </section>
     </main>
+    <footer>
+        <h2>Follow Us</h2>
+        <div class="social-links">
+            <a href="https://www.youtube.com/@niponfabrication4339" target="_blank">
+                <img class="icon" width="28" height="28" src="https://img.icons8.com/color/48/youtube-play.png" alt="YouTube"> YouTube
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100083563080741" target="_blank">
+                <img width="28" height="28" src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook"> Facebook
+            </a>
+            <a href="https://www.instagram.com/nipon_fabrication_/?hl=en" target="_blank">
+                <img width="28" height="28" src="https://img.icons8.com/color/48/instagram-new--v1.png" alt="Instagram"> Instagram
+            </a>
+        </div>
+        <p>&copy; 2023 Nipon Fabrication. All rights reserved.</p>
+    </footer>
 </body>
 </html>

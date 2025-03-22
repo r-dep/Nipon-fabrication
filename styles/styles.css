@@ -10,6 +10,7 @@ main {
 footer {
     padding: 20px;
     text-align: center;
+    background-color: #121212;
 }
 body.light-mode {
     --navbar-bg: rgba(255, 255, 255, 0.8);

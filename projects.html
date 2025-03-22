@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Projects</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/carousel-styles.css"> <!-- Link to the carousel stylesheet -->
@@ -37,6 +37,66 @@
             color: var(--link-color); /* Use link color */
             margin-top: 15px; /* Add spacing above */
             margin-bottom: 10px; /* Add spacing below */
+        }
+
+        /* Responsive styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .parallax-navbar {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .parallax-navbar h1 {
+            font-size: 1.2rem;
+        }
+
+        .parallax-navbar div {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        h1, h2, h3, h4 {
+            text-align: center;
+        }
+
+        .carousel-container {
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .carousel img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        iframe {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            font-size: 0.9rem;
         }
     </style>
     <script>
