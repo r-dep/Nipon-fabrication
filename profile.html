@@ -5,21 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Profile</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <meta property="og:image" content="/assets/images/owner.jpg">
     <script>
-        // Function to toggle between light and dark mode
-        function toggleDarkMode() {
-            const isDarkMode = document.body.classList.toggle('dark-mode');
-            document.body.classList.toggle('light-mode', !isDarkMode);
-            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light'); // Save theme preference
-        }
-
-        // Apply the saved theme on page load
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            document.body.classList.add(savedTheme + '-mode');
-        });
+        // Remove the toggleDarkMode function and theme-related logic
     </script>
     <style>
+        :root {
+            --navbar-bg: #333;
+            --footer-bg: #222;
+            --text-light: #fff;
+            --link-color: #007BFF;
+            --link-hover-color: #0056b3;
+            --accent-color: #FF5733;
+            --primary-color: #C70039;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: var(--text-light);
+            background-color: #f4f4f4;
+        }
+
+        .parallax-navbar {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+            background-color: var(--navbar-bg);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .parallax-navbar a {
+            color: var(--link-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .parallax-navbar a:hover {
+            color: var(--link-hover-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--footer-bg);
+            color: var(--text-light);
+        }
+
+        .social-links a {
+            color: var(--link-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--link-hover-color);
+        }
+
         .profile-header {
             background-color: var(--primary-color); /* Red */
             color: var(--text-light);
@@ -38,19 +80,6 @@
             background-size: contain;
         }
         /* Responsive styles */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        .parallax-navbar {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 10px;
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
         .parallax-navbar h1 {
             font-size: 1.2rem;
         }
@@ -81,12 +110,6 @@
             height: auto;
         }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-        }
-
         .social-links {
             display: flex;
             justify-content: center;
@@ -97,23 +120,45 @@
         .social-links a {
             font-size: 0.9rem;
         }
+
+        .parallax-navbar a {
+            color: #007BFF; /* Set link color to blue */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .parallax-navbar a:hover {
+            color: #0056b3; /* Darker blue on hover */
+        }
+
+        .social-links a {
+            color: #007BFF; /* Set link color to blue */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #0056b3; /* Darker blue on hover */
+        }
+
+        .theme-switch-container {
+            display: none; /* Hide the theme switch container */
+        }
+
+        @media (min-width: 768px) {
+            .theme-switch-container {
+                display: none; /* Hide the theme switch container */
+            }
+        }
     </style>
 </head>
-<body class="light-mode">
+<body>
     <!-- DOC HEADER -->
     <header>
         <nav class="parallax-navbar">
             <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
-                <h1 style="margin: 0; font-size: 1.5rem; color: var(--link-color, #333);">Nipon Fabrication</h1>
-                <div class="theme-switch-container" style="margin-left: auto;">
-                    <label for="theme-switch" style="font-size: 0.9rem; color: var(--link-color, #333);">
-                        Theme
-                    </label>
-                    <label class="theme-switch">
-                        <input id="theme-switch" type="checkbox" onchange="toggleDarkMode()">
-                        <span class="theme-switch-slider"></span>
-                    </label>
-                </div>
+                <h1 style="margin: 0; font-size: 1.5rem; color: var(--text-light);">Nipon Fabrication</h1>
+                <!-- Remove the theme-switch-container -->
             </div>
             <div style="display: flex; gap: 15px; align-items: center; margin-top: 10px;">
                 <a href="index.html">Home</a>
@@ -172,6 +217,7 @@
             </div>
         </div>
     </main>
+    <hr>
     <footer>
         <h2>Follow Us</h2>
         <div class="social-links">
