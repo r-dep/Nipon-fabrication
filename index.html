@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- tag-start -->
+    <!-- Meta Tags -->
     <meta name="google-site-verification" content="QxMT72YANimCksAfZeK-Dw8p7XsM5CVcvr-SfxAQTSU" />
-    <!-- tag-end -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="Nipon Fabrication offers high-quality roofing, gates, and staircases to enhance your space with strength, style, and precision.">
     <meta name="keywords" content="Nipon Fabrication, roofing, gates, staircases, metal fabrication, custom gates, home improvement">
     <meta name="author" content="Nipon Fabrication">
     <meta name="robots" content="index, follow">
-    <link rel="icon" href="/assets/images/owner.jpg" type="image/x-icon">
+
+    <!-- Social Media Meta Tags -->
     <meta property="og:title" content="Nipon Fabrication">
     <meta property="og:description" content="Nipon Fabrication offers high-quality roofing, gates, and staircases to enhance your space with strength, style, and precision.">
     <meta property="og:image" content="/assets/images/og-image.jpg">
@@ -20,26 +20,43 @@
     <meta name="twitter:title" content="Nipon Fabrication">
     <meta name="twitter:description" content="Nipon Fabrication offers high-quality roofing, gates, and staircases to enhance your space with strength, style, and precision.">
     <meta name="twitter:image" content="/assets/images/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/images/owner.jpg" type="image/x-icon">
+
+    <!-- Title -->
     <title>Nipon Fabrication</title>
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- Inline Styles -->
     <style>
         :root {
-            --navbar-bg: #333; /* Default navbar background */
-            --footer-bg: #222; /* Default footer background */
-            --text-light: #fff; /* Default text color */
-            --link-color: #007BFF; /* Default link color */
-            --link-hover-color: #0056b3; /* Link hover color */
-            --accent-color: #FF5733; /* Accent color */
-            --primary-color: #C70039; /* Primary color */
+            /* Color Variables */
+            --navbar-bg: #fff;
+            --footer-bg: #fff;
+            --text-light: #000;
+            --link-color: #000;
+            --link-hover-color: #666;
+            --accent-color: #fff;
+            --primary-color: #fff;
         }
 
+        /* General Body Styling */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             color: var(--text-light);
-            background-color: #f4f4f4; /* Default background color */
+            background-color: #000;
         }
 
+        /* Headings Styling */
+        h1, h2, h3 {
+            color: #fff;
+        }
+
+        /* Navbar Styling */
         .parallax-navbar {
             display: flex;
             flex-wrap: wrap;
@@ -58,6 +75,7 @@
             color: var(--link-hover-color);
         }
 
+        /* Footer Styling */
         footer {
             text-align: center;
             padding: 20px;
@@ -75,22 +93,26 @@
             color: var(--link-hover-color);
         }
 
+        /* Hero Section Styling */
         .hero-section {
             text-align: center;
             padding: 100px 20px;
             color: var(--text-light);
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/hero-bg.jpg');
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('/assets/images/hero-bg.jpg');
             background-size: cover;
             background-position: center;
         }
+
         .hero-section h1 {
             font-size: 3rem;
             margin-bottom: 20px;
         }
+
         .hero-section p {
             font-size: 1.2rem;
             margin-bottom: 30px;
         }
+
         .hero-section .cta-button {
             padding: 10px 20px;
             font-size: 1rem;
@@ -101,10 +123,12 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
+
         .hero-section .cta-button:hover {
-            background-color: var(--primary-color); /* Red */
+            background-color: var(--primary-color);
         }
-        /* Responsive styles */
+
+        /* Project Grid Styling */
         .project-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -117,6 +141,7 @@
             height: auto;
         }
 
+        /* Social Links Styling */
         .social-links {
             display: flex;
             justify-content: center;
@@ -127,9 +152,13 @@
         .social-links a {
             font-size: 0.9rem;
         }
+        p em{
+            color: white ;
+        }
     </style>
 </head>
 <body>
+    <!-- Header Section -->
     <header>
         <nav class="parallax-navbar">
             <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
@@ -144,18 +173,21 @@
         </nav>
     </header>
 
-    <!-- MAIN BODY -->
-
+    <!-- Main Content -->
     <main>
+        <!-- Hero Section -->
         <section class="hero-section slide-in">
             <h1>Welcome to Nipon Fabrication</h1>
             <p><em>"From roofs to gates, we create the backbone of your space—strong, stylish, and seamless!"</em></p>
             <button class="cta-button" onclick="location.href='services.html'">Explore Our Services</button>
         </section>
+
+        <!-- Parallax Section -->
         <section class="parallax-section slide-in" style="background-image: url('/assets/images/parallax.webp');">
             <!-- Add content here if needed -->
         </section>
-        
+
+        <!-- Popular Projects Section -->
         <h2 class="slide-in">Popular projects</h2>
         <div class="project-grid slide-in">
             <div class="project-card">
@@ -175,6 +207,8 @@
             </div>
         </div>
     </main>
+
+    <!-- Footer Section -->
     <hr>
     <footer>
         <h2>Follow Us</h2>

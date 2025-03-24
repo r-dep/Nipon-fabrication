@@ -1,30 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta property="og:image" content="/assets/images/owner.jpg">
+
+    <!-- Title -->
     <title>Services</title>
-    <link rel="stylesheet" href="/styles/styles.css"> <!-- Link to your CSS file -->
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/styles/styles.css">
+
+    <!-- Inline Styles -->
     <style>
         :root {
-            --navbar-bg: #333;
-            --footer-bg: #222;
-            --text-light: #fff;
-            --link-color: #007BFF;
-            --link-hover-color: #0056b3;
-            --accent-color: #FF5733;
-            --primary-color: #C70039;
+            /* Color Variables */
+            --navbar-bg: #fff;
+            --footer-bg: #fff;
+            --text-light: #000;
+            --link-color: #000;
+            --link-hover-color: #666;
+            --accent-color: #fff;
+            --primary-color: #fff;
         }
 
+        /* General Body Styling */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             color: var(--text-light);
-            background-color: #f4f4f4;
+            background-color: #000;
         }
 
+        /* Headings Styling */
+        h1, h2, h3 {
+            color: #fff;
+        }
+
+        /* Navbar Styling */
         .parallax-navbar {
             display: flex;
             flex-wrap: wrap;
@@ -43,6 +57,7 @@
             color: var(--link-hover-color);
         }
 
+        /* Footer Styling */
         footer {
             text-align: center;
             padding: 20px;
@@ -77,14 +92,18 @@
         </nav>
     </header>
 
-    <!-- MAIN BODY -->
+    <!-- Main Content -->
     <main>
+        <!-- Parallax Section -->
         <section class="parallax-section slide-in" style="background-image: url('/assets/images/parallax.webp');">
             <!-- Add content here if needed -->
         </section>
+
+        <!-- Services Section -->
         <h1 class="slide-in">Our Services</h1>
         <p class="slide-in">At Nipon Fabrication, we offer a wide range of services to meet your home and commercial fabrication needs. Our expertise ensures quality craftsmanship and customer satisfaction.</p>
 
+        <!-- Individual Service -->
         <section class="slide-in" style="color: red;">
             <h2>1. Roofing Solutions</h2>
             <img src="https://i.ytimg.com/an_webp/WpOROTSPxaQ/mqdefault_6s.webp?du=3000&sqp=CJz_-b4G&rs=AOn4CLDPUglQ_JIm0G93lXO8AnLcyEilUg" alt="Roofing Solutions" width="100%">
@@ -139,6 +158,8 @@
             </ul>
         </section>
     </main>
+
+    <!-- Footer Section -->
     <hr>
     <footer>
         <h2>Follow Us</h2>
